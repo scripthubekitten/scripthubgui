@@ -52,72 +52,28 @@ local Section = Tab:AddSection({
 	Name = "Movement"
 })
 
-
-2:57 / 8:34
-MAKE your own Roblox SCRIPT HUB tutorial in 10 MINUTES!
-Rolo
-1.89K subscribers
-4,294 views  Feb 27, 2023
-Hope this helps you get started with exploit scripting
-Drop a like/sub if you enjoyed
-
-Orion Library: https://github.com/shlexware/Orion/bl...
-
-
-Music
-1 - Lil Uzi Vert - The way life goes (Instrumental by ChinChinox)
-   • Lil Uzi Vert - Th...  
-
-2 - Home - Resonance 
-   • HOME - Resonance  
-
-3 - Pokelawls - nothing to miss
-   • Pokelawls - nothi...  
-
-The Entire script is below 
-IT IS STRONGLY RECOMMENDED TO FOLLOW ALONG THE VIDEO TO LEARN YOURSELF.
-
--- Tutorial Script Hub
-
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl...)
-
-local Window = OrionLib:MakeWindow({Name = "Tutorial Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-
-
--- player tab
-
-local PlayerTab = Window:MakeTab({
- Name = "Player",
- Icon = "rbxassetid://4483345998",
- PremiumOnly = false
-})
-
-local Section = PlayerTab:AddSection({
- Name = "Movement"
-})
-
 PlayerTab:AddSlider({
- Name = "Walkspeed",
- Min = 16,
- Max = 500,
- Default = 16,
- Color = Color3.fromRGB(255,255,255),
- Increment = 1,
- ValueName = "WS",
- Callback = function(Value)
-  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
- end    
-})
+    Name = "Walkspeed",
+    Min = 16,
+    Max = 500,
+    Default = 16,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "WS",
+    Callback = function(Value)
+     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end    
+   })
 
-PlayerTab:AddSlider({
- Name = "Jump Height",
- Min = 16,
- Max = 500,
- Default = 5,
- Color = Color3.fromRGB(255,255,255),
- Increment = 1,
- ValueName = "Height",
- Callback = function(Value)
-  game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
- end    
-})
+   PlayerTab:AddSlider({
+    Name = "Jump Height",
+    Min = 16,
+    Max = 500,
+    Default = 5,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "Height",
+    Callback = function(Value)
+     game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+    end    
+   })
